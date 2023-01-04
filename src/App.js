@@ -5,11 +5,12 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Card from 'react-bootstrap/Card';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
 import './App.css';
+import { Categorylist } from './mapA';
+
 
 export function App() {
   return (
@@ -41,7 +42,9 @@ export function App() {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <Button className='border border-0 bg-light text-dark' variant="outline-success">Гарах</Button>
+           <div className='gg'>
+           <Button className='border border-0 bg-light text-dark' variant="outline-success">Гарах</Button>
+           </div>
           </Form>
         </Navbar.Collapse>
       </Container>
@@ -64,24 +67,7 @@ export function App() {
       <h1 className='my-5 '>Ангилал</h1>
       <Button className='my-5' variant="outline-primary" onClick={handleShow}>Шинэ</Button>{' '}
     </div>
-    <Card body className='col-6 mx-auto my-3'>
-    <div className='d-flex justify-content-between'>
-    <p className='my-2' >Улс төр</p>
-      <Button variant="outline-primary">Засах</Button>{' '}
-    </div>
-    </Card>
-    <Card body className='col-6 mx-auto  my-3'>
-    <div className='d-flex justify-content-between'>
-    <p className='my-2' >Нийгэм</p>
-      <Button variant="outline-primary">Засах</Button>{' '}
-    </div>
-    </Card>
-    <Card body className='col-6 mx-auto '>
-    <div className='d-flex justify-content-between'>
-    <p className='my-2' >Спорт</p>
-      <Button variant="outline-primary">Засах</Button>{' '}
-    </div>
-    </Card>
+    <Categorylist/>
   
 
       <Modal show={show} onHide={handleClose}>
